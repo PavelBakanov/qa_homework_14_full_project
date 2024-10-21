@@ -8,7 +8,7 @@ import static io.qameta.allure.Allure.step;
 
 public class MainPage {
 
-    private final SelenideElement testingButtonLocator = $("[href='/testing/']");
+    private final SelenideElement testingButtonLocator = $(".buttons").$("href='/testing/'");
 
     public MainPage openMainPage() {
         step("Открываем главную страницу", () -> {
@@ -18,7 +18,7 @@ public class MainPage {
     }
 
     public MainPage clickTestingButton() {
-        testingButtonLocator.scrollTo().click();
+        testingButtonLocator.click();
         return this;
     }
 }
