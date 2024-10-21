@@ -2,13 +2,14 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 public class MainPage {
 
-    private final SelenideElement testingButtonLocator = $(".buttons").$("href='/testing/'");
+    private final SelenideElement testingButtonLocator = $(".buttons").$(byText("Тестировать"));
 
     public MainPage openMainPage() {
         step("Открываем главную страницу", () -> {
@@ -18,7 +19,7 @@ public class MainPage {
     }
 
     public MainPage clickTestingButton() {
-        testingButtonLocator.click();
+        testingButtonLocator.scrollTo().click();
         return this;
     }
 }
