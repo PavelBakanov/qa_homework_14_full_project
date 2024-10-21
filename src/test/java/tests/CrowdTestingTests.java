@@ -9,7 +9,7 @@ import pages.TestingPage;
 import static io.qameta.allure.Allure.step;
 
 @Tag("crowdtesting")
-public class CrowdTestingTests {
+public class CrowdTestingTests extends TestBase {
     MainPage mainPage = new MainPage();
     TestingPage testingPage = new TestingPage();
 
