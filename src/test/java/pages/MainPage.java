@@ -19,7 +19,7 @@ public class MainPage {
     }
 
     public MainPage clickTestingButton() {
-        testingButtonLocator.scrollTo().click();
+        testingButtonLocator.scrollTo().pressEnter();
         return this;
     }
 }
