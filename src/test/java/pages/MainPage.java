@@ -9,7 +9,7 @@ import static io.qameta.allure.Allure.step;
 
 public class MainPage {
 
-    private final SelenideElement testingButtonLocator = $(".buttons").$(byText("Тестировать"));
+    private final SelenideElement testingButtonLocator = $(byText("Тестировать"));
 
     public MainPage openMainPage() {
         step("Открываем главную страницу", () -> {
