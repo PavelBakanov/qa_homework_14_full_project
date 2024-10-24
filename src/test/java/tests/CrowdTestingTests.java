@@ -47,7 +47,7 @@ public class CrowdTestingTests extends TestBase {
         });
 
         step("Нажимаем на кнопку 'Блог'", () -> {
-
+            testingPage.clickToBlogButton();
         });
 
     }

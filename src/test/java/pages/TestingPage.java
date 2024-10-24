@@ -27,9 +27,8 @@ public class TestingPage {
         return this;
     }
 
-    public TestingPage searchCertainPost() {
+    public TestingPage clickToBlogButton() {
         $(blogButtonLocator).scrollTo().pressEnter();
-
         return this;
     }
 }
