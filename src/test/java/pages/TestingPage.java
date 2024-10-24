@@ -29,7 +29,7 @@ public class TestingPage {
 
     public TestingPage clickToBlogButton() {
 
-        $(".nav-item.active").scrollTo().pressEnter();
+        $(".col2.nav-2").scrollTo().$(byText("Блог")).pressEnter();
         return this;
     }
 }

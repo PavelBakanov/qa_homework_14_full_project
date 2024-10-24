@@ -17,8 +17,7 @@ public class MainPage {
     }
 
     public MainPage clickTestingButton() {
-        $(".col2.nav-2").scrollTo().$(byText("Блог")).pressEnter();
-
+        testingButtonLocator.scrollTo().pressEnter();
         return this;
     }
 }
