@@ -38,4 +38,17 @@ public class CrowdTestingTests extends TestBase {
         });
 
     }
+
+    @Test
+    @DisplayName("Проверка поиска")
+    public void searchTest() {
+        step("На главной странице нажимаем на кнопку 'Тестировать'", () -> {
+            mainPage.clickTestingButton();
+        });
+
+        step("Нажимаем на кнопку 'Блог'", () -> {
+
+        });
+
+    }
 }

@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class TestingPage {
 
     private final SelenideElement textContainerLocator = $(".text.aos-init.aos-animate");
+    private final SelenideElement blogButtonLocator = $("[href='/blog/']");
 
 
     public TestingPage findCertainText() {
@@ -22,6 +23,12 @@ public class TestingPage {
         $(byText("Портфолио")).scrollTo();
         $(byText("Карьера")).scrollTo();
         $(byText("Для респондентов")).scrollTo();
+
+        return this;
+    }
+
+    public TestingPage searchCertainPost() {
+        $(blogButtonLocator).scrollTo().pressEnter();
 
         return this;
     }
