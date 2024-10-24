@@ -5,6 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class TestingPage {
 
@@ -28,8 +29,7 @@ public class TestingPage {
     }
 
     public TestingPage clickToBlogButton() {
-
-        $(".col2.nav-2").scrollTo().$(byText("Блог")).pressEnter();
+         open("/blog/");
         return this;
     }
 }
