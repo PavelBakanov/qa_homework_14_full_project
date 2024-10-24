@@ -33,8 +33,8 @@ public class CrowdTestingTests extends TestBase {
             mainPage.clickTestingButton();
         });
 
-        step("Ищем на странице текст в определенном месте", () -> {
-
+        step("Проверяем по тексту всё меню 'О компании'", () -> {
+            testingPage.checkTextInAboutCompanyMenu();
         });
 
     }
