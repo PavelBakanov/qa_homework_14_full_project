@@ -28,7 +28,8 @@ public class TestingPage {
     }
 
     public TestingPage clickToBlogButton() {
-        $(blogButtonLocator).scrollTo().click();
+
+        $(".nav-item.active").scrollTo().click();
         return this;
     }
 }
