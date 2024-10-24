@@ -21,7 +21,7 @@ public class CrowdTestingTests extends TestBase {
         });
 
         step("Ищем на странице текст в определенном месте", () -> {
-            testingPage.findSomeText();
+            testingPage.findCertainText();
         });
 
     }

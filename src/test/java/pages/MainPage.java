@@ -12,9 +12,7 @@ public class MainPage {
     private final SelenideElement testingButtonLocator = $(byText("Тестировать"));
 
     public MainPage openMainPage() {
-        step("Открываем главную страницу", () -> {
-            open("https://www.crowdtesting.ru/");
-        });
+        open("https://www.crowdtesting.ru/");
         return this;
     }
 
