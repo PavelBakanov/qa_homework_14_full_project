@@ -15,13 +15,26 @@ public class CrowdTestingTests extends TestBase {
 
     @Test
     @DisplayName("Поиск на странице текста 'Функциональное, интеграционное, приемочное'")
-    public void findSomeTextText() {
+    public void findSomeTextTest() {
         step("На главной странице нажимаем на кнопку 'Тестировать'", () -> {
             mainPage.clickTestingButton();
         });
 
         step("Ищем на странице текст в определенном месте", () -> {
             testingPage.findCertainText();
+        });
+
+    }
+
+    @Test
+    @DisplayName("Проверка текста в меню 'О компании', находящемся в хэдере сайта")
+    public void checkAboutCompanyMenuTest() {
+        step("На главной странице нажимаем на кнопку 'Тестировать'", () -> {
+            mainPage.clickTestingButton();
+        });
+
+        step("Ищем на странице текст в определенном месте", () -> {
+
         });
 
     }
