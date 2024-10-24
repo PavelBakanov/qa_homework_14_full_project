@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class TestingPage {
 
     private final SelenideElement textContainerLocator = $(".text.aos-init.aos-animate");
-    private final SelenideElement blogButtonLocator = $("[href='/blog/']");
+    private final SelenideElement blogButtonLocator = $(byText("Блог"));
 
 
     public TestingPage findCertainText() {

@@ -12,7 +12,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.MainPage;
 
 import java.util.Map;
-import java.util.Objects;
 
 import static io.qameta.allure.Allure.step;
 
