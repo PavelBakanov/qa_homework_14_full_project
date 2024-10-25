@@ -44,7 +44,7 @@ public class CrowdTestingTests extends TestBase {
     @Test
     @DisplayName("Проверка поиска")
     public void searchTest() {
-        step("Нажимаем на кнопку 'Блог'", () -> {
+        step("Открываем раздел 'Блог'", () -> {
             blogPage.openBlogLink();
         });
         step("Вводим определенный текст и нажимаем Enter", () -> {
