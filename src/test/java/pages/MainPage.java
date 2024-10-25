@@ -5,11 +5,11 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static io.qameta.allure.Allure.step;
 
 public class MainPage {
 
     private final SelenideElement testingButtonLocator = $(byText("Тестировать"));
+    private final SelenideElement researchButtonLocator = $(byText("Исследовать"));
 
     public MainPage openMainPage() {
         open("https://www.crowdtesting.ru/");
@@ -18,6 +18,10 @@ public class MainPage {
 
     public MainPage clickTestingButton() {
         testingButtonLocator.scrollTo().pressEnter();
+        return this;
+    }
+    public MainPage clickResearchButton() {
+        researchButtonLocator.scrollTo().pressEnter();
         return this;
     }
 }

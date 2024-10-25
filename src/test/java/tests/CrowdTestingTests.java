@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.BlogPage;
 import pages.MainPage;
+import pages.ResearchPage;
 import pages.TestingPage;
 
 import static io.qameta.allure.Allure.step;
@@ -14,6 +15,7 @@ public class CrowdTestingTests extends TestBase {
     private final MainPage mainPage = new MainPage();
     private final TestingPage testingPage = new TestingPage();
     private final BlogPage blogPage = new BlogPage();
+    private final ResearchPage researchPage = new ResearchPage();
 
     @Test
     @DisplayName("Поиск на странице текста 'Функциональное, интеграционное, приемочное'")
@@ -21,11 +23,9 @@ public class CrowdTestingTests extends TestBase {
         step("На главной странице нажимаем на кнопку 'Тестировать'", () -> {
             mainPage.clickTestingButton();
         });
-
         step("Ищем на странице текст в определенном месте", () -> {
             testingPage.findCertainText();
         });
-
     }
 
     @Test
@@ -34,11 +34,9 @@ public class CrowdTestingTests extends TestBase {
         step("На главной странице нажимаем на кнопку 'Тестировать'", () -> {
             mainPage.clickTestingButton();
         });
-
         step("Проверяем по тексту всё меню 'О компании'", () -> {
             testingPage.checkTextInAboutCompanyMenu();
         });
-
     }
 
     @Test
@@ -52,6 +50,20 @@ public class CrowdTestingTests extends TestBase {
         });
         step("Проверяем нужный текст в самой первой выдаче результата", () -> {
             blogPage.checkCertainTextInPlain();
+        });
+    }
+
+    @Test
+    @DisplayName("Проверка содержания анимированного текста в разделе 'Исследования'")
+    public void animatedTextTest() {
+        step("На главной странице наживаем на кнопку 'Исследовать'", () -> {
+            mainPage.clickResearchButton();
+        });
+        step("Скроллим к определенному заголовку, что-бы анимированный текст появился", () -> {
+            researchPage.scrollToCertainTitle();
+        });
+        step("Проверяем содержание анимированного текста", () -> {
+            researchPage.checkContentOfAnimatedText();
         });
     }
 }
