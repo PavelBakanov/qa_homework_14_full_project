@@ -28,8 +28,11 @@ public class TestingPage {
         return this;
     }
 
-    public TestingPage clickToBlogButton() {
-         open("/blog/");
-        return this;
-    }
+
+
+
+
+
+
+
 }
