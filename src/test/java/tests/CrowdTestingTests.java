@@ -14,6 +14,7 @@ public class CrowdTestingTests extends TestBase {
     private final BlogPage blogPage = new BlogPage();
     private final ResearchPage researchPage = new ResearchPage();
     private final CrowdtestingPage crowdtestingPage = new CrowdtestingPage();
+    private final CasesPage casesPage = new CasesPage();
 
     @Test
     @DisplayName("Поиск на странице текста 'Функциональное, интеграционное, приемочное'")
@@ -41,7 +42,7 @@ public class CrowdTestingTests extends TestBase {
     @DisplayName("Проверка поиска")
     public void searchTest() {
         step("Открываем раздел 'Блог'", () -> {
-            mainPage.openBlogLink();
+            mainPage.openBlogPage();
         });
         step("Вводим определенный текст и нажимаем Enter", () -> {
             blogPage.typeTextToInputField();
@@ -69,7 +70,7 @@ public class CrowdTestingTests extends TestBase {
     @DisplayName("Проверка шторки в разделе 'Краудтестинг'")
     public void sliderTest() {
         step("Открываем раздел 'Краудтестинг'", () -> {
-            mainPage.openCrowdTestingLink();
+            mainPage.openCrowdTestingPage();
         });
         step("Находим шторку и двигаем ее", () -> {
             crowdtestingPage.tryToMoveSlider();
@@ -77,6 +78,19 @@ public class CrowdTestingTests extends TestBase {
         step("После прокрутки шторки проверяем, что текст в ней поменялся на другой", () -> {
             crowdtestingPage.checkTextInCurrentSlide();
         });
+    }
 
+    @Test
+    @DisplayName("Проверка невидимого изначально текста в разделе 'Кейсы'")
+    public void invisibleTextTest() {
+        step("Открываем раздел 'Кейсы'", () -> {
+            mainPage.openCasesPage();
+        });
+        step("Жмем кнопку 'Показать еще'", () -> {
+            casesPage.clickToMoreButton();
+        });
+        step("После нажатия кнопки проверяется определенный текст. Ищем его на странице", () -> {
+            casesPage.checkOfCertainText();
+        });
     }
 }

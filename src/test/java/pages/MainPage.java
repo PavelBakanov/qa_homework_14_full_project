@@ -16,13 +16,17 @@ public class MainPage {
         return this;
     }
 
-    public MainPage openBlogLink() {
+    public MainPage openBlogPage() {
         open("/blog/");
         return this;
     }
 
-    public MainPage openCrowdTestingLink() {
+    public MainPage openCrowdTestingPage() {
         open("/crowdtesting/");
+        return this;
+    }
+    public MainPage openCasesPage() {
+        open("/company/cases/");
         return this;
     }
 
