@@ -16,10 +16,21 @@ public class MainPage {
         return this;
     }
 
+    public MainPage openBlogLink() {
+        open("/blog/");
+        return this;
+    }
+
+    public MainPage openCrowdTestingLink() {
+        open("/crowdtesting/");
+        return this;
+    }
+
     public MainPage clickTestingButton() {
         testingButtonLocator.scrollTo().pressEnter();
         return this;
     }
+
     public MainPage clickResearchButton() {
         researchButtonLocator.scrollTo().pressEnter();
         return this;

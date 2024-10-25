@@ -10,6 +10,7 @@ public class ResearchPage {
         $(byText("Количественные исследования")).scrollTo();
         return this;
     }
+
     public ResearchPage checkContentOfAnimatedText() {
         $(".block-2-2").shouldHave(text(
                 "выбрать наиболее важный функционал продукта, определить лучший вариант UI и др."));

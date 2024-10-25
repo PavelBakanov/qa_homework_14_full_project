@@ -3,10 +3,7 @@ package tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.BlogPage;
-import pages.MainPage;
-import pages.ResearchPage;
-import pages.TestingPage;
+import pages.*;
 
 import static io.qameta.allure.Allure.step;
 
@@ -16,6 +13,7 @@ public class CrowdTestingTests extends TestBase {
     private final TestingPage testingPage = new TestingPage();
     private final BlogPage blogPage = new BlogPage();
     private final ResearchPage researchPage = new ResearchPage();
+    private final CrowdtestingPage crowdtestingPage = new CrowdtestingPage();
 
     @Test
     @DisplayName("Поиск на странице текста 'Функциональное, интеграционное, приемочное'")
@@ -43,7 +41,7 @@ public class CrowdTestingTests extends TestBase {
     @DisplayName("Проверка поиска")
     public void searchTest() {
         step("Открываем раздел 'Блог'", () -> {
-            blogPage.openBlogLink();
+            mainPage.openBlogLink();
         });
         step("Вводим определенный текст и нажимаем Enter", () -> {
             blogPage.typeTextToInputField();
@@ -64,6 +62,17 @@ public class CrowdTestingTests extends TestBase {
         });
         step("Проверяем содержание анимированного текста", () -> {
             researchPage.checkContentOfAnimatedText();
+        });
+    }
+
+    @Test
+    @DisplayName("Проверка шторки в разделе 'Краудтестинг'. Пробуем ее подвигать")
+    public void sliderTest() {
+        step("Открываем раздел 'Краудтестинг'", () -> {
+            mainPage.openCrowdTestingLink();
+        });
+        step("Находим шторку и двигаем ее", () -> {
+            crowdtestingPage.tryToMoveSlider();
         });
     }
 }
