@@ -16,12 +16,10 @@ public class CrowdtestingPage {
     }
 
     public CrowdtestingPage checkTextInCurrentSlide() {
-        $(".new-feedbacks .item.slick-slide.slick-current.slick-active .txt").shouldHave(text("Мы положительно оцениваем" +
-                " опыт совместных проектов, " +
-                "высокое качество результатов " +
-                "и четкую организацию самого процесса " +
-                "выполнения проектов, а так же " +
-                "профессионализм команды CrowdTesting."));
+        $(".new-feedbacks .item.slick-slide.slick-current.slick-active .txt").
+                shouldHave(text("Опыт сотрудничества с компанией CrowdTesting" +
+                        " наша компания характеризует исключительно положительно. " +
+                        "Все работы выполняются с высоким качеством, в установленные сроки."));
         return this;
     }
 }
