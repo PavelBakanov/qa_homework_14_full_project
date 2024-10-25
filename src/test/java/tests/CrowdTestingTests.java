@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.*;
 
+import static com.codeborne.selenide.Selenide.sleep;
 import static io.qameta.allure.Allure.step;
 
 @Tag("crowdtesting")
@@ -74,5 +75,6 @@ public class CrowdTestingTests extends TestBase {
         step("Находим шторку и двигаем ее", () -> {
             crowdtestingPage.tryToMoveSlider();
         });
+        sleep(5000);
     }
 }
