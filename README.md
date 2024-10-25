@@ -5,8 +5,8 @@
 * <a href="#tests">Что делают тесты?</a>
 * <a href="#tools">Технологии</a>
 * <a href="#jenkins">Jenkins</a>
-* <a href="#allure">Алюр отчетик</a>
-* <a href="#telegramBot">Ботец</a>
+* <a href="#allure">Отчет в Allureк</a>
+* <a href="#telegramBot">Бот в Telegram</a>
 
 ---
 <a id="tests"></a>
