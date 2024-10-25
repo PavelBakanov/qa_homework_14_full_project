@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.*;
 
-import static com.codeborne.selenide.Selenide.sleep;
 import static io.qameta.allure.Allure.step;
 
 @Tag("crowdtesting")
@@ -67,7 +66,7 @@ public class CrowdTestingTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка шторки в разделе 'Краудтестинг'. Пробуем ее подвигать")
+    @DisplayName("Проверка шторки в разделе 'Краудтестинг'")
     public void sliderTest() {
         step("Открываем раздел 'Краудтестинг'", () -> {
             mainPage.openCrowdTestingLink();
@@ -75,6 +74,9 @@ public class CrowdTestingTests extends TestBase {
         step("Находим шторку и двигаем ее", () -> {
             crowdtestingPage.tryToMoveSlider();
         });
-        sleep(5000);
+        step("После прокрутки шторки проверяем, что текст в ней поменялся на другой", () -> {
+            crowdtestingPage.checkTextInCurrentSlide();
+        });
+
     }
 }
