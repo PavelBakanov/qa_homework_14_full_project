@@ -16,7 +16,7 @@ public class CrowdtestingPage {
     }
 
     public CrowdtestingPage checkTextInCurrentSlide() {
-        $(".item.slick-slide.slick-current.slick-active .txt").shouldHave(text("Мы положительно оцениваем" +
+        $(".new-feedbacks .item.slick-slide.slick-current.slick-active .txt").shouldHave(text("Мы положительно оцениваем" +
                 " опыт совместных проектов, " +
                 "высокое качество результатов " +
                 "и четкую организацию самого процесса " +
