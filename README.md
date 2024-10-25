@@ -5,7 +5,7 @@
 * <a href="#tests">Что делают тесты?</a>
 * <a href="#tools">Технологии</a>
 * <a href="#jenkins">Jenkins</a>
-* <a href="#allure">Отчет в Allureк</a>
+* <a href="#allure">Отчет в Allure</a>
 * <a href="#telegramBot">Бот в Telegram</a>
 
 ---
@@ -59,5 +59,5 @@
 
 После выполнения отчета результат так же предоставит бот в Telegram:
 <p align="center">
-    <img src="images/TeleframBot.png">
+    <img src="images/TelegramBot.png">
 </p>
