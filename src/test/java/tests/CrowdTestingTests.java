@@ -50,8 +50,8 @@ public class CrowdTestingTests extends TestBase {
         step("Вводим определенный текст и нажимаем Enter", () -> {
             blogPage.typeTextToInputField();
         });
-
-
-
+        step("Проверяем нужный текст в самой первой выдаче результата", () -> {
+            blogPage.checkCertainTextInPlain();
+        });
     }
 }
