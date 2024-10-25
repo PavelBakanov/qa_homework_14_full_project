@@ -10,7 +10,7 @@ public class CrowdtestingPage {
     private final SelenideElement sliderLocator = $(".slider.js-crowdtesting-new-feedbacks-slider .slick-track");
 
     public CrowdtestingPage tryToMoveSlider() {
-        actions().dragAndDropBy(sliderLocator, 500, 0);
+        actions().dragAndDropBy(sliderLocator, 500, 0).perform();
         return this;
     }
 }
