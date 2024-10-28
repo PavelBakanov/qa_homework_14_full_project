@@ -90,7 +90,7 @@ public class CrowdTestingTests extends TestBase {
             casesPage.clickToMoreButton();
         });
         step("После нажатия кнопки найти и проверить определенный текст", () -> {
-            casesPage.checkOfCertainText();//
+            casesPage.checkOfCertainText();
         });
     }
 }
