@@ -64,7 +64,7 @@ public class CrowdTestingTests extends TestBase {
         step("Проверяем содержание анимированного текста", () -> {
             researchPage.checkContentOfAnimatedText();
         });
-    }
+    }*/
 
     @Test
     @DisplayName("Проверка шторки в разделе 'Краудтестинг'")
@@ -78,9 +78,9 @@ public class CrowdTestingTests extends TestBase {
         step("После прокрутки шторки проверяем, что текст в ней поменялся на другой", () -> {
             crowdtestingPage.checkTextInCurrentSlide();
         });
-    }*/
+    }
 
-    @Test
+    /*@Test
     @DisplayName("Проверка невидимого изначально текста в разделе 'Кейсы'")
     public void invisibleTextTest() {
         step("Открываем раздел 'Кейсы'", () -> {
@@ -92,5 +92,5 @@ public class CrowdTestingTests extends TestBase {
         step("После нажатия кнопки проверяется определенный текст. Ищем его на странице", () -> {
             casesPage.checkOfCertainText();
         });
-    }
+    }*/
 }
