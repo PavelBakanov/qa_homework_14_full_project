@@ -70,5 +70,5 @@
 <h1 align="center">Видео прохождения тестов</h1>
 
 <p align="center">
-<img title="testResultsVideo" src="images/videos/testResultsVideo.mp4" width="700" height="400"  alt="video">   
+<img title="testResultsVideo" src="images/videos/testResultsVideo.gif" width="700" height="400"  alt="video">   
 </p>
