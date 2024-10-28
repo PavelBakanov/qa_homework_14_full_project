@@ -9,8 +9,7 @@ import static com.codeborne.selenide.Selenide.actions;
 
 public class CrowdtestingPage {
 
-    private final SelenideElement sliderLocator = $(".slider.js-crowdtesting-new-feedbacks-slider ." +
-            "slick-track .slick-current");
+    private final SelenideElement sliderLocator = $(".slider.js-crowdtesting-new-feedbacks-slider .slick-track");
 
     public CrowdtestingPage tryToMoveSlider() {
         String stringBrowserWidth = Configuration.browserSize;
@@ -21,7 +20,7 @@ public class CrowdtestingPage {
     }
 
     public CrowdtestingPage checkTextInCurrentSlide() {
-        $(".new-feedbacks .item.slick-slide.slick-current.slick-active .txt").
+        $(".slider.js-crowdtesting-new-feedbacks-slider .slick-current .txt").
                 shouldHave(text("Опыт сотрудничества с компанией CrowdTesting" +
                         " наша компания характеризует исключительно положительно. " +
                         "Все работы выполняются с высоким качеством, в установленные сроки."));
