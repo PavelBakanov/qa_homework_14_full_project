@@ -7,6 +7,7 @@
 * <a href="#jenkins">Jenkins</a>
 * <a href="#allure">Отчет в Allure</a>
 * <a href="#telegramBot">Бот в Telegram</a>
+* <a href="#video">Видео прохождения тестов</a>
 
 ---
 <a id="tests"></a>
@@ -61,4 +62,13 @@
 После выполнения отчета результат так же предоставит бот в Telegram:
 <p align="center">
     <img src="images/TelegramBot.png">
+</p>
+
+---
+
+<a id="video"></a>
+<h1 align="center">Видео прохождения тестов</h1>
+
+<p align="center">
+<img title="testResultsVideo" src="images/videos/testResultsVideo.mp4" width="700" height="400"  alt="video">   
 </p>
