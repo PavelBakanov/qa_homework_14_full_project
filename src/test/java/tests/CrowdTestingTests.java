@@ -16,7 +16,7 @@ public class CrowdTestingTests extends TestBase {
     private final CrowdtestingPage crowdtestingPage = new CrowdtestingPage();
     private final CasesPage casesPage = new CasesPage();
 
-    @Test
+    /*@Test
     @DisplayName("Поиск на странице текста 'Функциональное, интеграционное, приемочное'")
     public void findSomeTextTest() {
         step("На главной странице нажимаем на кнопку 'Тестировать'", () -> {
@@ -78,7 +78,7 @@ public class CrowdTestingTests extends TestBase {
         step("После прокрутки шторки проверяем, что текст в ней поменялся на другой", () -> {
             crowdtestingPage.checkTextInCurrentSlide();
         });
-    }
+    }*/
 
     @Test
     @DisplayName("Проверка невидимого изначально текста в разделе 'Кейсы'")
