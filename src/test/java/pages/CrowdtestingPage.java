@@ -15,7 +15,7 @@ public class CrowdtestingPage {
         String stringBrowserWidth = Configuration.browserSize;
         String[] arrayForSplit = stringBrowserWidth.split("x");
         int browserWidth = Integer.parseInt(arrayForSplit[1]);
-        actions().dragAndDropBy(sliderLocator, browserWidth / 3, 0).perform();
+        actions().dragAndDropBy(sliderLocator, - browserWidth / 3, 0).perform();
         return this;
     }
 
