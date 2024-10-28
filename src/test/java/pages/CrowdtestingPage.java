@@ -9,7 +9,8 @@ import static com.codeborne.selenide.Selenide.actions;
 
 public class CrowdtestingPage {
 
-    private final SelenideElement sliderLocator = $(".slider.js-crowdtesting-new-feedbacks-slider .slick-track");
+    private final SelenideElement sliderLocator = $(".slider.js-crowdtesting-new-feedbacks-slider ." +
+            "slick-track .slick-current");
 
     public CrowdtestingPage tryToMoveSlider() {
         String stringBrowserWidth = Configuration.browserSize;
