@@ -19,10 +19,10 @@ public class CrowdTestingTests extends TestBase {
     @Test
     @DisplayName("Поиск на странице текста 'Функциональное, интеграционное, приемочное'")
     public void findSomeTextTest() {
-        step("На главной странице нажимаем на кнопку 'Тестировать'", () -> {
+        step("На главной странице нажать на кнопку 'Тестировать'", () -> {
             mainPage.clickTestingButton();
         });
-        step("Ищем на странице текст в определенном месте", () -> {
+        step("Искать на странице текст в определенном месте", () -> {
             testingPage.findCertainText();
         });
     }
@@ -30,10 +30,10 @@ public class CrowdTestingTests extends TestBase {
     @Test
     @DisplayName("Проверка текста в меню 'О компании', находящемся в хэдере сайта")
     public void checkAboutCompanyMenuTest() {
-        step("На главной странице нажимаем на кнопку 'Тестировать'", () -> {
+        step("На главной странице нажать на кнопку 'Тестировать'", () -> {
             mainPage.clickTestingButton();
         });
-        step("Проверяем по тексту всё меню 'О компании'", () -> {
+        step("Проверить по тексту всё меню 'О компании'", () -> {
             testingPage.checkTextInAboutCompanyMenu();
         });
     }
@@ -41,13 +41,13 @@ public class CrowdTestingTests extends TestBase {
     @Test
     @DisplayName("Проверка поиска")
     public void searchTest() {
-        step("Открываем раздел 'Блог'", () -> {
+        step("Открыть раздел 'Блог'", () -> {
             mainPage.openBlogPage();
         });
-        step("Вводим определенный текст и нажимаем Enter", () -> {
+        step("Ввести определенный текст и нажать Enter", () -> {
             blogPage.typeTextToInputField();
         });
-        step("Проверяем нужный текст в самой первой выдаче результата", () -> {
+        step("Проверить нужный текст в самой первой выдаче результата", () -> {
             blogPage.checkCertainTextInPlain();
         });
     }
@@ -55,13 +55,13 @@ public class CrowdTestingTests extends TestBase {
     @Test
     @DisplayName("Проверка содержания анимированного текста в разделе 'Исследования'")
     public void animatedTextTest() {
-        step("На главной странице наживаем на кнопку 'Исследовать'", () -> {
+        step("На главной странице нажать на кнопку 'Исследовать'", () -> {
             mainPage.clickResearchButton();
         });
-        step("Скроллим к определенному заголовку, что-бы анимированный текст появился", () -> {
+        step("Скроллить к определенному заголовку, что-бы анимированный текст появился", () -> {
             researchPage.scrollToCertainTitle();
         });
-        step("Проверяем содержание анимированного текста", () -> {
+        step("Проверить содержание анимированного текста", () -> {
             researchPage.checkContentOfAnimatedText();
         });
     }
@@ -69,13 +69,13 @@ public class CrowdTestingTests extends TestBase {
     @Test
     @DisplayName("Проверка шторки в разделе 'Краудтестинг'")
     public void sliderTest() {
-        step("Открываем раздел 'Краудтестинг'", () -> {
+        step("Открыть раздел 'Краудтестинг'", () -> {
             mainPage.openCrowdTestingPage();
         });
-        step("Находим шторку и двигаем ее", () -> {
+        step("Найти шторку и двигать ее", () -> {
             crowdtestingPage.tryToMoveSlider();
         });
-        step("После прокрутки шторки проверяем, что текст в ней поменялся на другой", () -> {
+        step("После прокрутки шторки проверить, что текст в ней поменялся на другой", () -> {
             crowdtestingPage.checkTextInCurrentSlide();
         });
     }
@@ -83,13 +83,13 @@ public class CrowdTestingTests extends TestBase {
     @Test
     @DisplayName("Проверка невидимого изначально текста в разделе 'Кейсы'")
     public void invisibleTextTest() {
-        step("Открываем раздел 'Кейсы'", () -> {
+        step("Открыть раздел 'Кейсы'", () -> {
             mainPage.openCasesPage();
         });
-        step("Жмем кнопку 'Показать еще'", () -> {
+        step("Нажать на кнопку 'Показать еще'", () -> {
             casesPage.clickToMoreButton();
         });
-        step("После нажатия кнопки проверяется определенный текст. Ищем его на странице", () -> {
+        step("После нажатия кнопки найти и проверить определенный текст", () -> {
             casesPage.checkOfCertainText();
         });
     }
