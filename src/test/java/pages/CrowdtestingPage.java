@@ -20,7 +20,7 @@ public class CrowdtestingPage {
     }
 
     public CrowdtestingPage checkTextInCurrentSlide() {
-        $(".slider.js-crowdtesting-new-feedbacks-slider .slick-current .txt").
+        $("[aria-hidden='false'] .txt").
                 shouldHave(text("Опыт сотрудничества с компанией CrowdTesting" +
                         " наша компания характеризует исключительно положительно. " +
                         "Все работы выполняются с высоким качеством, в установленные сроки."));
