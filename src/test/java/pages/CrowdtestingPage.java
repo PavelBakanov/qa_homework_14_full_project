@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
@@ -11,7 +12,10 @@ public class CrowdtestingPage {
     private final SelenideElement sliderLocator = $(".slider.js-crowdtesting-new-feedbacks-slider .slick-track");
 
     public CrowdtestingPage tryToMoveSlider() {
-        actions().dragAndDropBy(sliderLocator, 750, 0).perform();
+        String stringBrowserWidth = Configuration.browserSize;
+        String[] arrayForSplit = stringBrowserWidth.split("x");
+        int browserWidth = Integer.parseInt(arrayForSplit[1]);
+        actions().dragAndDropBy(sliderLocator, browserWidth / 2 + 1, 0).perform();
         return this;
     }
 
