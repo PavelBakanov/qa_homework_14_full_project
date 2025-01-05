@@ -24,7 +24,7 @@ public class CheckTextTests extends TestBase {
             mainPage.clickTestingButton();
         });
         step("Искать на странице текст в определенном месте", () -> {
-            testingPage.findCertainText();
+            testingPage.findCertainText("Функциональное, интеграционное, приемочное");
         });
     }
 
@@ -48,10 +48,11 @@ public class CheckTextTests extends TestBase {
             mainPage.clickResearchButton();
         });
         step("Скроллить к определенному заголовку, что-бы анимированный текст появился", () -> {
-            researchPage.scrollToCertainTitle();
+            researchPage.scrollToCertainTitle("Количественные исследования");
         });
         step("Проверить содержание анимированного текста", () -> {
-            researchPage.checkContentOfAnimatedText();
+            researchPage.checkContentOfAnimatedText("выбрать наиболее важный функционал продукта, " +
+                    "определить лучший вариант UI и др.");
         });
     }
 

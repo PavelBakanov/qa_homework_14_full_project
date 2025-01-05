@@ -11,8 +11,8 @@ public class TestingPage {
     private final SelenideElement textContainerLocator = $(".text.aos-init.aos-animate");
 
 
-    public TestingPage findCertainText() {
-        textContainerLocator.shouldHave(text("Функциональное, интеграционное, приемочное"));
+    public TestingPage findCertainText(String text) {
+        textContainerLocator.shouldHave(text(text));
         return this;
     }
 

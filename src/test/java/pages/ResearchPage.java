@@ -1,19 +1,21 @@
 package pages;
 
+import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class ResearchPage {
 
-    public ResearchPage scrollToCertainTitle() {
-        $(byText("Количественные исследования")).scrollTo();
+    private final SelenideElement block22Locator = $(".block-2-2");
+    public ResearchPage scrollToCertainTitle(String title) {
+        $(byText(title)).scrollTo();
         return this;
     }
 
-    public ResearchPage checkContentOfAnimatedText() {
-        $(".block-2-2").shouldHave(text(
-                "выбрать наиболее важный функционал продукта, определить лучший вариант UI и др."));
+    public ResearchPage checkContentOfAnimatedText(String text) {
+        block22Locator.shouldHave(text(text));
         return this;
     }
 

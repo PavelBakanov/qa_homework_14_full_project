@@ -9,14 +9,13 @@ public class BlogPage {
     private final SelenideElement inputFieldLocator = $("[name='stext']");
     private final SelenideElement plainLocator = $(".plain");
 
-    public BlogPage typeTextToInputField() {
-        inputFieldLocator.scrollTo().setValue("как получить").pressEnter();
+    public BlogPage typeTextToInputField(String text) {
+        inputFieldLocator.scrollTo().setValue(text).pressEnter();
         return this;
     }
 
-    public BlogPage checkCertainTextInPlain() {
-        plainLocator.scrollTo().shouldHave(text(
-                "Как получить дополнительные бонусы за участие в проектах краудтестирования"));
+    public BlogPage checkCertainTextInPlain(String text) {
+        plainLocator.scrollTo().shouldHave(text(text));
         return this;
     }
 }

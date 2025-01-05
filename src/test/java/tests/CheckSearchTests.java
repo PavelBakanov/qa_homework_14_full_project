@@ -22,10 +22,11 @@ public class CheckSearchTests extends TestBase {
             mainPage.openBlogPage();
         });
         step("Ввести определенный текст и нажать Enter", () -> {
-            blogPage.typeTextToInputField();
+            blogPage.typeTextToInputField("как получить");
         });
         step("Проверить нужный текст в самой первой выдаче результата", () -> {
-            blogPage.checkCertainTextInPlain();
+            blogPage.checkCertainTextInPlain("Как получить дополнительные бонусы" +
+                    " за участие в проектах краудтестирования");
         });
     }
 

@@ -22,17 +22,13 @@ public class CrowdtestingPage {
         return this;
     }
 
-    public CrowdtestingPage checkTextInCurrentSlide() {
+    public CrowdtestingPage checkTextInCurrentSlide(String text, String alternativeText) {
         if (Objects.equals(Configuration.browserSize, "800x600")) {
             feedbacksSliderLocator.$("[aria-hidden='false'] .txt").
-                    shouldHave(text("Компания CrowdTesting за время нашего сотрудничества неоднократно " +
-                            "продемонстрировала свой высокий профессионализм и компетентность в " +
-                            "исследованиях юзабилити и клиентского опыта наших сервисов."));
+                    shouldHave(text(text));
         } else {
             feedbacksSliderLocator.$("[aria-hidden='false'] .txt").
-                    shouldHave(text("Опыт сотрудничества с компанией CrowdTesting" +
-                            " наша компания характеризует исключительно положительно. " +
-                            "Все работы выполняются с высоким качеством, в установленные сроки."));
+                    shouldHave(text(alternativeText));
         }
         return this;
     }
