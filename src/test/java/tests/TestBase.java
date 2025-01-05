@@ -24,12 +24,11 @@ public class TestBase {
     static void setUp() {
         WebConfig webConfig = ConfigFactory.create(WebConfig.class, System.getProperties());
 
-        Configuration.browserSize = webConfig.getBrowserSize();//System.getProperty("browserSize");
-        Configuration.browser = webConfig.getBrowserName();//System.getProperty("browser");
-        Configuration.browserVersion = webConfig.getBrowserVersion();//System.getProperty("browserVersion");
-        Configuration.baseUrl = webConfig.getBaseUrl();//System.getProperty("baseURL");
+        Configuration.browserSize = webConfig.getBrowserSize();
+        Configuration.browser = webConfig.getBrowserName();
+        Configuration.browserVersion = webConfig.getBrowserVersion();
+        Configuration.baseUrl = webConfig.getBaseUrl();
         Configuration.remote = webConfig.getRemoteUrl();
-        //Configuration.remote = "https://" + System.getProperty("login") + "@" + System.getProperty("remoteURL");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
