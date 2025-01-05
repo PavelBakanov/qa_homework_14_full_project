@@ -40,7 +40,7 @@ public class TestBase {
 
     @BeforeEach
     protected void doBeforeEach() {
-        step("Открываем главную страницу!", () -> {
+        step("Открываем главную страницу", () -> {
             mainPage.openMainPage();
         });
 
