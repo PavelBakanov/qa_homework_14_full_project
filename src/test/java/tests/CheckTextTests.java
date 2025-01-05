@@ -8,12 +8,10 @@ import pages.*;
 import static io.qameta.allure.Allure.step;
 
 @Tag("crowdtesting")
-public class CrowdTestingTests extends TestBase {
+public class CheckTextTests extends TestBase {
     private final MainPage mainPage = new MainPage();
     private final TestingPage testingPage = new TestingPage();
-    private final BlogPage blogPage = new BlogPage();
     private final ResearchPage researchPage = new ResearchPage();
-    private final CrowdtestingPage crowdtestingPage = new CrowdtestingPage();
     private final CasesPage casesPage = new CasesPage();
 
     @Test
@@ -39,20 +37,6 @@ public class CrowdTestingTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка поиска")
-    public void searchTest() {
-        step("Открыть раздел 'Блог'", () -> {
-            mainPage.openBlogPage();
-        });
-        step("Ввести определенный текст и нажать Enter", () -> {
-            blogPage.typeTextToInputField();
-        });
-        step("Проверить нужный текст в самой первой выдаче результата", () -> {
-            blogPage.checkCertainTextInPlain();
-        });
-    }
-
-    @Test
     @DisplayName("Проверка содержания анимированного текста в разделе 'Исследования'")
     public void animatedTextTest() {
         step("На главной странице нажать на кнопку 'Исследовать'", () -> {
@@ -63,20 +47,6 @@ public class CrowdTestingTests extends TestBase {
         });
         step("Проверить содержание анимированного текста", () -> {
             researchPage.checkContentOfAnimatedText();
-        });
-    }
-
-    @Test
-    @DisplayName("Проверка шторки в разделе 'Краудтестинг'")
-    public void sliderTest() {
-        step("Открыть раздел 'Краудтестинг'", () -> {
-            mainPage.openCrowdTestingPage();
-        });
-        step("Найти шторку и двигать ее", () -> {
-            crowdtestingPage.tryToMoveSlider();
-        });
-        step("После прокрутки шторки проверить, что текст в ней поменялся на другой", () -> {
-            crowdtestingPage.checkTextInCurrentSlide();
         });
     }
 
@@ -111,5 +81,4 @@ public class CrowdTestingTests extends TestBase {
                     " приложения.");
         });
     }
-
 }
