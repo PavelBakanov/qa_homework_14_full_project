@@ -3,8 +3,10 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.WebConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,11 +22,17 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
-        Configuration.browserSize = System.getProperty("browserSize");
-        Configuration.browser = System.getProperty("browserName");
-        Configuration.browserVersion = System.getProperty("browserVersion");
-        Configuration.baseUrl = System.getProperty("baseURL");
-        Configuration.remote = "https://" + System.getProperty("login") + "@" + System.getProperty("remoteURL");
+        WebConfig webConfig = ConfigFactory.create(WebConfig.class, System.getProperties());
+
+        Configuration.browserSize = webConfig.getBrowserSize();//System.getProperty("browserSize");
+        Configuration.browser = webConfig.getBrowserName();//System.getProperty("browser");
+        Configuration.browserVersion = webConfig.getBrowserVersion();//System.getProperty("browserVersion");
+        Configuration.baseUrl = webConfig.getBaseUrl();//System.getProperty("baseURL");
+        if (System.getProperty("env").equals(null))
+        {
+            Configuration.remote = "https://" + webConfig.getLogin() + "@" + webConfig.getRemoteUrl();
+        }
+        //Configuration.remote = "https://" + System.getProperty("login") + "@" + System.getProperty("remoteURL");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
