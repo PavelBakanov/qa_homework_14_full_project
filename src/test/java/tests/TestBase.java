@@ -28,7 +28,7 @@ public class TestBase {
         Configuration.browser = webConfig.getBrowserName();//System.getProperty("browser");
         Configuration.browserVersion = webConfig.getBrowserVersion();//System.getProperty("browserVersion");
         Configuration.baseUrl = webConfig.getBaseUrl();//System.getProperty("baseURL");
-        Configuration.remote = "https://" + webConfig.getLogin() + "@" + webConfig.getRemoteUrl();
+        Configuration.remote = webConfig.getRemoteUrl();
         //Configuration.remote = "https://" + System.getProperty("login") + "@" + System.getProperty("remoteURL");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

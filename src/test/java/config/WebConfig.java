@@ -22,11 +22,7 @@ public interface WebConfig extends Config {
     @DefaultValue("https://www.crowdtesting.ru/")
     String getBaseUrl();
 
-    @Key("remoteUrl")
-    @DefaultValue("https://selenoid.autotests.cloud/video/")
+    @Key("remoteURL")
     String getRemoteUrl();
-
-    @Key("login")
-    String getLogin();
 
 }
