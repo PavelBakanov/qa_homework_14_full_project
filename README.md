@@ -35,7 +35,7 @@
 <a id="jenkins"></a>
 ## <a name="Jenkins">**Jenkins**</a>
 
-Тесты запускаются только через [Jenkins](https://jenkins.autotests.cloud/job/qa_homework_14_jenkins_crowdtesting_project/)  
+Тесты запускаются только через [Jenkins](https://jenkins.autotests.cloud/job/qa_diplom_ui/)  
 
 <img src="images/Jenkins.png" width="900">
 
