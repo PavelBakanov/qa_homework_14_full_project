@@ -4,7 +4,7 @@
 
 * <a href="#tests">Что делают тесты?</a>
 * <a href="#tools">Технологии</a>
-* <a href="#jenkins">Jenkins</a>
+* <a href="#launch">Запуск</a>
 * <a href="#allure">Отчет в Allure</a>
 * <a href="#telegramBot">Бот в Telegram</a>
 * <a href="#video">Видео прохождения тестов</a>
@@ -32,10 +32,14 @@
 </p>
 
 ---
-<a id="jenkins"></a>
-## <a name="Jenkins">**Jenkins**</a>
 
-Тесты запускаются только через [Jenkins](https://jenkins.autotests.cloud/job/qa_diplom_ui/)  
+<a id="launch"></a>
+## <a name="Запуск">**Запуск**</a>
+
+Для запуска локально в терминале нужно прописать:
+ - ./gradlew clean crowdtesting_test -Denv=local
+
+Так же тесты можно запустить через [Jenkins](https://jenkins.autotests.cloud/job/qa_diplom_ui/)  
 
 <img src="images/Jenkins.png" width="900">
 
@@ -43,7 +47,7 @@
 - Браузер
 - Разрешение экрана
 - Версию браузера
-
+Остальные параметры идут по умолчанию, без выбора
 ---
 
 <a id="allure"></a>
