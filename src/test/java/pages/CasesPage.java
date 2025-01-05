@@ -13,9 +13,8 @@ public class CasesPage {
         moreButtonLocator.click();
         return this;
     }
-    public CasesPage checkOfCertainText() {
-        $(casesContainerLocator).shouldHave(text("Одному из Операторов большой тройки" +
-                " требуется обеспечить автоматизированное тестирование всего функционала биллинговой системы:"));
+    public CasesPage checkOfCertainText(String text) {
+        $(casesContainerLocator).shouldHave(text(text));
         return this;
     }
 }
