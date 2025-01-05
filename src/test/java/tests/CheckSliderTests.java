@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -13,6 +14,7 @@ public class CheckSliderTests extends TestBase{
     private final CrowdtestingPage crowdtestingPage = new CrowdtestingPage();
 
     @Test
+    @Owner(value = "bakanovpb")
     @DisplayName("Проверка шторки в разделе 'Краудтестинг'")
     public void sliderTest() {
         step("Открыть раздел 'Краудтестинг'", () -> {

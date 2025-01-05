@@ -23,9 +23,8 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("browserSize");
         Configuration.browser = System.getProperty("browserName");
         Configuration.browserVersion = System.getProperty("browserVersion");
-        Configuration.baseUrl = "https://www.crowdtesting.ru/";
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.remote = "https://" + System.getProperty("login") + "@" + System.getProperty("remote");
+        Configuration.baseUrl = System.getProperty("baseURL");
+        Configuration.remote = "https://" + System.getProperty("login") + "@" + System.getProperty("remoteURL");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,

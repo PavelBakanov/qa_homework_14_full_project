@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -13,6 +14,7 @@ public class CheckSearchTests extends TestBase {
     private final BlogPage blogPage = new BlogPage();
 
     @Test
+    @Owner(value = "bakanovpb")
     @DisplayName("Проверка поиска")
     public void searchTest() {
         step("Открыть раздел 'Блог'", () -> {

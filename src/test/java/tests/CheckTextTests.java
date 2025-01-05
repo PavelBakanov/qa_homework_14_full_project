@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,7 @@ public class CheckTextTests extends TestBase {
     private final CasesPage casesPage = new CasesPage();
 
     @Test
+    @Owner(value = "bakanovpb")
     @DisplayName("Поиск на странице текста 'Функциональное, интеграционное, приемочное'")
     public void findSomeTextTest() {
         step("На главной странице нажать на кнопку 'Тестировать'", () -> {
@@ -26,6 +28,7 @@ public class CheckTextTests extends TestBase {
     }
 
     @Test
+    @Owner(value = "bakanovpb")
     @DisplayName("Проверка текста в меню 'О компании', находящемся в хэдере сайта")
     public void checkAboutCompanyMenuTest() {
         step("На главной странице нажать на кнопку 'Тестировать'", () -> {
@@ -37,6 +40,7 @@ public class CheckTextTests extends TestBase {
     }
 
     @Test
+    @Owner(value = "bakanovpb")
     @DisplayName("Проверка содержания анимированного текста в разделе 'Исследования'")
     public void animatedTextTest() {
         step("На главной странице нажать на кнопку 'Исследовать'", () -> {
@@ -51,6 +55,7 @@ public class CheckTextTests extends TestBase {
     }
 
     @Test
+    @Owner(value = "bakanovpb")
     @DisplayName("Проверка невидимого изначально текста в разделе 'Кейсы'")
     public void invisibleTextTest() {
         step("Открыть раздел 'Кейсы'", () -> {
@@ -66,6 +71,7 @@ public class CheckTextTests extends TestBase {
     }
 
     @Test
+    @Owner(value = "bakanovpb")
     @DisplayName("Проверка еще одного невидимого изначально текста в разделе 'Кейсы'")
     public void anotherInvisibleTextTest() {
         step("Открыть раздел 'Кейсы'", () -> {
