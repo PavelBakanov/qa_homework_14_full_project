@@ -55,7 +55,7 @@
 <a id="allure"></a>
 ## <a name="Отчет в Allure">**Отчет в Allure**</a>
 
-После выполнения тестов можно посмотреть отчет в [Allure](https://jenkins.autotests.cloud/job/qa_homework_14_jenkins_crowdtesting_project/allure/)
+После выполнения тестов можно посмотреть отчет в [Allure](https://jenkins.autotests.cloud/job/qa_diplom_ui/7/allure/)
 ### На скриншоте один из результатов выполнения тестов:
 
 <img src="images/AllureReport.png" width="900">
