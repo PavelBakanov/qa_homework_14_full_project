@@ -9,6 +9,7 @@ import pages.*;
 import static io.qameta.allure.Allure.step;
 
 @Tag("crowdtesting")
+@DisplayName("Тесты на проверку поиска")
 public class CheckSearchTests extends TestBase {
     private final MainPage mainPage = new MainPage();
     private final BlogPage blogPage = new BlogPage();

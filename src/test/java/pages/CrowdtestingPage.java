@@ -12,6 +12,7 @@ import static com.codeborne.selenide.Selenide.actions;
 public class CrowdtestingPage {
 
     private final SelenideElement sliderLocator = $(".slider.js-crowdtesting-new-feedbacks-slider .slick-track");
+    private final SelenideElement feedbacksSliderLocator = $(".slider.js-crowdtesting-new-feedbacks-slider");
 
     public CrowdtestingPage tryToMoveSlider() {
         String stringBrowserWidth = Configuration.browserSize;
@@ -23,12 +24,12 @@ public class CrowdtestingPage {
 
     public CrowdtestingPage checkTextInCurrentSlide() {
         if (Objects.equals(Configuration.browserSize, "800x600")) {
-            $(".slider.js-crowdtesting-new-feedbacks-slider").$("[aria-hidden='false'] .txt").
+            feedbacksSliderLocator.$("[aria-hidden='false'] .txt").
                     shouldHave(text("Компания CrowdTesting за время нашего сотрудничества неоднократно " +
                             "продемонстрировала свой высокий профессионализм и компетентность в " +
                             "исследованиях юзабилити и клиентского опыта наших сервисов."));
         } else {
-            $(".slider.js-crowdtesting-new-feedbacks-slider").$("[aria-hidden='false'] .txt").
+            feedbacksSliderLocator.$("[aria-hidden='false'] .txt").
                     shouldHave(text("Опыт сотрудничества с компанией CrowdTesting" +
                             " наша компания характеризует исключительно положительно. " +
                             "Все работы выполняются с высоким качеством, в установленные сроки."));
