@@ -9,13 +9,10 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.MainPage;
 
 import java.util.Map;
-
-import static io.qameta.allure.Allure.step;
 
 public class TestBase {
     private final MainPage mainPage = new MainPage();
@@ -36,14 +33,6 @@ public class TestBase {
         ));
         Configuration.browserCapabilities = capabilities;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
-
-    @BeforeEach
-    protected void doBeforeEach() {
-        step("Открываем главную страницу", () -> {
-            mainPage.openMainPage();
-        });
-
     }
 
     @AfterEach

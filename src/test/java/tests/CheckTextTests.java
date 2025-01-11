@@ -20,6 +20,9 @@ public class CheckTextTests extends TestBase {
     @Owner(value = "bakanovpb")
     @DisplayName("Поиск на странице текста 'Функциональное, интеграционное, приемочное'")
     public void findSomeTextTest() {
+        step("Открываем главную страницу", () -> {
+            mainPage.openMainPage();
+        });
         step("На главной странице нажать на кнопку 'Тестировать'", () -> {
             mainPage.clickTestingButton();
         });
@@ -32,6 +35,9 @@ public class CheckTextTests extends TestBase {
     @Owner(value = "bakanovpb")
     @DisplayName("Проверка текста в меню 'О компании', находящемся в хэдере сайта")
     public void checkAboutCompanyMenuTest() {
+        step("Открываем главную страницу", () -> {
+            mainPage.openMainPage();
+        });
         step("На главной странице нажать на кнопку 'Тестировать'", () -> {
             mainPage.clickTestingButton();
         });
@@ -44,6 +50,9 @@ public class CheckTextTests extends TestBase {
     @Owner(value = "bakanovpb")
     @DisplayName("Проверка содержания анимированного текста в разделе 'Исследования'")
     public void animatedTextTest() {
+        step("Открываем главную страницу", () -> {
+            mainPage.openMainPage();
+        });
         step("На главной странице нажать на кнопку 'Исследовать'", () -> {
             mainPage.clickResearchButton();
         });
@@ -60,6 +69,9 @@ public class CheckTextTests extends TestBase {
     @Owner(value = "bakanovpb")
     @DisplayName("Проверка невидимого изначально текста в разделе 'Кейсы'")
     public void invisibleTextTest() {
+        step("Открываем главную страницу", () -> {
+            mainPage.openMainPage();
+        });
         step("Открыть раздел 'Кейсы'", () -> {
             mainPage.openCasesPage();
         });
@@ -76,6 +88,9 @@ public class CheckTextTests extends TestBase {
     @Owner(value = "bakanovpb")
     @DisplayName("Проверка еще одного невидимого изначально текста в разделе 'Кейсы'")
     public void anotherInvisibleTextTest() {
+        step("Открываем главную страницу", () -> {
+            mainPage.openMainPage();
+        });
         step("Открыть раздел 'Кейсы'", () -> {
             mainPage.openCasesPage();
         });

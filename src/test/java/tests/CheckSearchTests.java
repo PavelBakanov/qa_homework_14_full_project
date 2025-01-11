@@ -18,6 +18,9 @@ public class CheckSearchTests extends TestBase {
     @Owner(value = "bakanovpb")
     @DisplayName("Проверка поиска")
     public void searchTest() {
+        step("Открываем главную страницу", () -> {
+            mainPage.openMainPage();
+        });
         step("Открыть раздел 'Блог'", () -> {
             mainPage.openBlogPage();
         });

@@ -18,6 +18,9 @@ public class CheckSliderTests extends TestBase{
     @Owner(value = "bakanovpb")
     @DisplayName("Проверка шторки в разделе 'Краудтестинг'")
     public void sliderTest() {
+        step("Открываем главную страницу", () -> {
+            mainPage.openMainPage();
+        });
         step("Открыть раздел 'Краудтестинг'", () -> {
             mainPage.openCrowdTestingPage();
         });
