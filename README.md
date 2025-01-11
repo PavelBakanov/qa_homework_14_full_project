@@ -1,10 +1,10 @@
-# Тесты сайта [crowdtesting.ru](https://www.crowdtesting.ru/) в качестве домашней работы для qa.guru
+# Тесты сайта [crowdtesting.ru](https://www.crowdtesting.ru/) в качестве дипломной работы для qa.guru
 
 ## Содержание
 
 * <a href="#tests">Что делают тесты?</a>
 * <a href="#tools">Технологии</a>
-* <a href="#jenkins">Jenkins</a>
+* <a href="#launch">Запуск</a>
 * <a href="#allure">Отчет в Allure</a>
 * <a href="#telegramBot">Бот в Telegram</a>
 * <a href="#video">Видео прохождения тестов</a>
@@ -32,10 +32,14 @@
 </p>
 
 ---
-<a id="jenkins"></a>
-## <a name="Jenkins">**Jenkins**</a>
 
-Тесты запускаются только через [Jenkins](https://jenkins.autotests.cloud/job/qa_diplom_ui/)  
+<a id="launch"></a>
+## <a name="Запуск">**Запуск**</a>
+
+Для запуска локально в терминале нужно прописать:
+ - ./gradlew clean crowdtesting_test -Denv=local
+
+Так же тесты можно запустить через [Jenkins](https://jenkins.autotests.cloud/job/qa_diplom_ui/)  
 
 <img src="images/Jenkins.png" width="900">
 
@@ -44,12 +48,14 @@
 - Разрешение экрана
 - Версию браузера
 
+Остальные параметры идут по умолчанию, без выбора.
+
 ---
 
 <a id="allure"></a>
 ## <a name="Отчет в Allure">**Отчет в Allure**</a>
 
-После выполнения тестов можно посмотреть отчет в [Allure](https://jenkins.autotests.cloud/job/qa_homework_14_jenkins_crowdtesting_project/allure/)
+После выполнения тестов можно посмотреть отчет в [Allure](https://jenkins.autotests.cloud/job/qa_diplom_ui/7/allure/)
 ### На скриншоте один из результатов выполнения тестов:
 
 <img src="images/AllureReport.png" width="900">
