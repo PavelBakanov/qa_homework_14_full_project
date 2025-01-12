@@ -29,6 +29,7 @@
 <a href="ht[images](images)tps://github.com/allure-framework/allure2"><img src="images/logo/Allure.svg" width="50" height="50"  alt="Allure"/></a>  
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>  
 <a href="https://aerokube.com/selenoid/"><img src="images/logo/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>  
+<a href="(https://qameta.io/)"><img src="images/logo/AllureTestOps.svg" width="50" height="50"  alt="AllureTestOps"/></a>
 </p>
 
 ---
