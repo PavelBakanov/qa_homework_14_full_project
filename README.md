@@ -6,6 +6,7 @@
 * <a href="#tools">Технологии</a>
 * <a href="#launch">Запуск</a>
 * <a href="#allure">Отчет в Allure</a>
+* <a href="#allureTestOps">Интеграция с Allure TestOps</a>
 * <a href="#telegramBot">Бот в Telegram</a>
 * <a href="#video">Видео прохождения тестов</a>
 
@@ -60,6 +61,15 @@
 ### На скриншоте один из результатов выполнения тестов:
 
 <img src="images/AllureReport.png" width="900">
+
+---
+
+<a id="allureTestOps"></a>
+## <a name="Интеграция с Allure TestOps">**Интеграция с Allure TestOps**</a>
+
+Есть интеграция с Allure TestOps, где можно посмотреть еще ручные тесты
+
+<img src="images/AllureTestOps.png" width="900">
 
 ---
 
