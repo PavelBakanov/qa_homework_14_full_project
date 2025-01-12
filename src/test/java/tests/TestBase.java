@@ -15,8 +15,6 @@ import pages.MainPage;
 import java.util.Map;
 
 public class TestBase {
-    private final MainPage mainPage = new MainPage();
-
     @BeforeAll
     static void setUp() {
         WebConfig webConfig = ConfigFactory.create(WebConfig.class, System.getProperties());
