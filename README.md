@@ -69,7 +69,7 @@
 
 Есть интеграция с Allure TestOps, где можно посмотреть еще ручные тесты
 
-<img src="images/AllureTestOps.png" width="900">
+<img src="images/TestOps.png" width="900">
 
 ---
 
