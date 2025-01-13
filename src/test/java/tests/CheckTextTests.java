@@ -8,6 +8,7 @@ import pages.*;
 
 import static io.qameta.allure.Allure.step;
 
+@Owner(value = "bakanovpb")
 @Tag("crowdtesting")
 @DisplayName("Тесты на проверку текста на страницах")
 public class CheckTextTests extends TestBase {
@@ -17,91 +18,50 @@ public class CheckTextTests extends TestBase {
     private final CasesPage casesPage = new CasesPage();
 
     @Test
-    @Owner(value = "bakanovpb")
     @DisplayName("Поиск на странице текста 'Функциональное, интеграционное, приемочное'")
     public void findSomeTextTest() {
-        step("Открываем главную страницу", () -> {
-            mainPage.openMainPage();
-        });
-        step("На главной странице нажать на кнопку 'Тестировать'", () -> {
-            mainPage.clickTestingButton();
-        });
-        step("Искать на странице текст в определенном месте", () -> {
-            testingPage.findCertainText("Функциональное, интеграционное, приемочное");
-        });
+        mainPage.openMainPage();
+        mainPage.clickTestingButton();
+        testingPage.findCertainText("Функциональное, интеграционное, приемочное");
     }
 
     @Test
-    @Owner(value = "bakanovpb")
     @DisplayName("Проверка текста в меню 'О компании', находящемся в хэдере сайта")
     public void checkAboutCompanyMenuTest() {
-        step("Открываем главную страницу", () -> {
-            mainPage.openMainPage();
-        });
-        step("На главной странице нажать на кнопку 'Тестировать'", () -> {
-            mainPage.clickTestingButton();
-        });
-        step("Проверить по тексту всё меню 'О компании'", () -> {
-            testingPage.checkTextInAboutCompanyMenu("О нас", "Портфолио", "Карьера", "Для респондентов");
-        });
+        mainPage.openMainPage();
+        mainPage.clickTestingButton();
+        testingPage.checkTextInAboutCompanyMenu("О нас", "Портфолио", "Карьера", "Для респондентов");
     }
 
     @Test
-    @Owner(value = "bakanovpb")
     @DisplayName("Проверка содержания анимированного текста в разделе 'Исследования'")
     public void animatedTextTest() {
-        step("Открываем главную страницу", () -> {
-            mainPage.openMainPage();
-        });
-        step("На главной странице нажать на кнопку 'Исследовать'", () -> {
-            mainPage.clickResearchButton();
-        });
-        step("Скроллить к определенному заголовку, что-бы анимированный текст появился", () -> {
-            researchPage.scrollToCertainTitle("Количественные исследования");
-        });
-        step("Проверить содержание анимированного текста", () -> {
-            researchPage.checkContentOfAnimatedText("выбрать наиболее важный функционал продукта, " +
+        mainPage.openMainPage();
+        mainPage.clickResearchButton();
+        researchPage.scrollToCertainTitle("Количественные исследования");
+        researchPage.checkContentOfAnimatedText("выбрать наиболее важный функционал продукта, " +
                     "определить лучший вариант UI и др.");
-        });
     }
 
     @Test
-    @Owner(value = "bakanovpb")
     @DisplayName("Проверка невидимого изначально текста в разделе 'Кейсы'")
     public void invisibleTextTest() {
-        step("Открываем главную страницу", () -> {
-            mainPage.openMainPage();
-        });
-        step("Открыть раздел 'Кейсы'", () -> {
-            mainPage.openCasesPage();
-        });
-        step("Нажать на кнопку 'Показать еще'", () -> {
-            casesPage.clickToMoreButton();
-        });
-        step("После нажатия кнопки найти и проверить определенный текст", () -> {
-            casesPage.checkOfCertainText("Одному из Операторов большой тройки" +
+        mainPage.openMainPage();
+        mainPage.openCasesPage();
+        casesPage.clickToMoreButton();
+        casesPage.checkOfCertainText("Одному из Операторов большой тройки" +
                     " требуется обеспечить автоматизированное тестирование всего функционала биллинговой системы:");
-        });
     }
 
     @Test
-    @Owner(value = "bakanovpb")
     @DisplayName("Проверка еще одного невидимого изначально текста в разделе 'Кейсы'")
     public void anotherInvisibleTextTest() {
-        step("Открываем главную страницу", () -> {
-            mainPage.openMainPage();
-        });
-        step("Открыть раздел 'Кейсы'", () -> {
-            mainPage.openCasesPage();
-        });
-        step("Нажать на кнопку 'Показать еще'", () -> {
-            casesPage.clickToMoreButton();
-        });
-        step("После нажатия кнопки найти и проверить определенный текст", () -> {
-            casesPage.checkOfCertainText("Большая доля пользователей перестают пользоваться приложением после" +
+        mainPage.openMainPage();
+        mainPage.openCasesPage();
+        casesPage.clickToMoreButton();
+        casesPage.checkOfCertainText("Большая доля пользователей перестают пользоваться приложением после" +
                     " установки и регистрации. Необходимо понять, почему приложением не пользуются, несмотря на то," +
                     " что по данным других исследований целевая аудитория высоко оценивает саму идею такого рода" +
                     " приложения.");
-        });
     }
 }
