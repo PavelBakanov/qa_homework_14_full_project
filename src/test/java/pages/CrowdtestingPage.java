@@ -15,6 +15,7 @@ public class CrowdtestingPage {
     private final SelenideElement sliderLocator = $(".slider.js-crowdtesting-new-feedbacks-slider .slick-track");
     private final SelenideElement feedbacksSliderLocator = $(".slider.js-crowdtesting-new-feedbacks-slider");
 
+    @Step("Найти шторку и двигать ее")
     public CrowdtestingPage tryToMoveSlider() {
         String stringBrowserWidth = Configuration.browserSize;
         String[] arrayForSplit = stringBrowserWidth.split("x");
@@ -23,6 +24,7 @@ public class CrowdtestingPage {
         return this;
     }
 
+    @Step("После прокрутки шторки проверить, что текст в ней поменялся на другой")
     public CrowdtestingPage checkTextInCurrentSlide(String text, String alternativeText) {
         if (Objects.equals(Configuration.browserSize, "800x600")) {
             feedbacksSliderLocator.$("[aria-hidden='false'] .txt").
