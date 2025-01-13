@@ -23,7 +23,7 @@ public class TestingPage {
 
     public TestingPage checkTextInAboutCompanyMenu(String... listMenuText) {
 
-        if (burgerMenuLocator.exists()){
+        if (burgerMenuLocator.isDisplayed()){
             burgerMenuLocator.click();
         }
         
