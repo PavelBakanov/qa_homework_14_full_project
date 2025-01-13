@@ -10,11 +10,13 @@ public class BlogPage {
     private final SelenideElement inputFieldLocator = $("[name='stext']");
     private final SelenideElement plainLocator = $(".plain");
 
+    @Step("Ввести определенный текст и нажать Enter")
     public BlogPage typeTextToInputField(String text) {
         inputFieldLocator.scrollTo().setValue(text).pressEnter();
         return this;
     }
 
+    @Step("Проверить нужный текст в самой первой выдаче результата")
     public BlogPage checkCertainTextInPlain(String text) {
         plainLocator.scrollTo().shouldHave(text(text));
         return this;
