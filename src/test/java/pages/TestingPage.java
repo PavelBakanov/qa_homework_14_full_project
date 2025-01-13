@@ -23,8 +23,8 @@ public class TestingPage {
     public TestingPage checkTextInAboutCompanyMenu(String... listMenuText) {
         aboutCompanyLocator.hover();
 
-        for(int i = 0; i < listMenuText.size(); i++) {
-            menuItemsLocator.get(i).shouldHave(text(listMenuText.get(i)));
+        for(int i = 0; i < listMenuText.length; i++) {
+            menuItemsLocator.get(i).shouldHave(text(listMenuText[i]));
         }
 
         
