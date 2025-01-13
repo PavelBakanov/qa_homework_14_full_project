@@ -21,10 +21,7 @@ public class CheckSliderTests extends TestBase{
         mainPage.openMainPage();
         mainPage.openCrowdTestingPage();
         crowdtestingPage.tryToMoveSlider();
-        crowdtestingPage.checkTextInCurrentSlide("Компания CrowdTesting за время нашего сотрудничества " +
-                    "неоднократно " +
-                    "продемонстрировала свой высокий профессионализм и компетентность в " +
-                    "исследованиях юзабилити и клиентского опыта наших сервисов.", "Опыт сотрудничества" +
+        crowdtestingPage.checkTextInCurrentSlide("Опыт сотрудничества" +
                     " с компанией CrowdTesting" +
                     " наша компания характеризует исключительно положительно. " +
                     "Все работы выполняются с высоким качеством, в установленные сроки.");
