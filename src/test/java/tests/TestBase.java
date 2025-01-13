@@ -30,16 +30,19 @@ public class TestBase {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
+    }
+
+    @BeforeEach
+    void preTest() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     @AfterEach
-    protected void tearDown() {
+    void tearDown() {
         Attach.screenshotAs("Последний скриншот");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
         Selenide.closeWebDriver();
     }
-
 }
