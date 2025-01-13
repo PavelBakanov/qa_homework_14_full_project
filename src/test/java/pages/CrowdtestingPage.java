@@ -25,14 +25,9 @@ public class CrowdtestingPage {
     }
 
     @Step("После прокрутки шторки проверить, что текст в ней поменялся на другой")
-    public CrowdtestingPage checkTextInCurrentSlide(String text, String alternativeText) {
-        if (Objects.equals(Configuration.browserSize, "800x600")) {
+    public CrowdtestingPage checkTextInCurrentSlide(String text) {
             feedbacksSliderLocator.$("[aria-hidden='false'] .txt").
                     shouldHave(text(text));
-        } else {
-            feedbacksSliderLocator.$("[aria-hidden='false'] .txt").
-                    shouldHave(text(alternativeText));
-        }
         return this;
     }
 }
