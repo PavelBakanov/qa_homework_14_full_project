@@ -8,6 +8,7 @@ import pages.*;
 
 import static io.qameta.allure.Allure.step;
 
+@Owner(value = "bakanovpb")
 @Tag("crowdtesting")
 @DisplayName("Тесты на проверку слайдеров")
 public class CheckSliderTests extends TestBase{
@@ -15,26 +16,17 @@ public class CheckSliderTests extends TestBase{
     private final CrowdtestingPage crowdtestingPage = new CrowdtestingPage();
 
     @Test
-    @Owner(value = "bakanovpb")
     @DisplayName("Проверка шторки в разделе 'Краудтестинг'")
     public void sliderTest() {
-        step("Открываем главную страницу", () -> {
-            mainPage.openMainPage();
-        });
-        step("Открыть раздел 'Краудтестинг'", () -> {
-            mainPage.openCrowdTestingPage();
-        });
-        step("Найти шторку и двигать ее", () -> {
-            crowdtestingPage.tryToMoveSlider();
-        });
-        step("После прокрутки шторки проверить, что текст в ней поменялся на другой", () -> {
-            crowdtestingPage.checkTextInCurrentSlide("Компания CrowdTesting за время нашего сотрудничества " +
+        mainPage.openMainPage();
+        mainPage.openCrowdTestingPage();
+        crowdtestingPage.tryToMoveSlider();
+        crowdtestingPage.checkTextInCurrentSlide("Компания CrowdTesting за время нашего сотрудничества " +
                     "неоднократно " +
                     "продемонстрировала свой высокий профессионализм и компетентность в " +
                     "исследованиях юзабилити и клиентского опыта наших сервисов.", "Опыт сотрудничества" +
                     " с компанией CrowdTesting" +
                     " наша компания характеризует исключительно положительно. " +
                     "Все работы выполняются с высоким качеством, в установленные сроки.");
-        });
     }
 }
