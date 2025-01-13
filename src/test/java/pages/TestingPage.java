@@ -12,7 +12,7 @@ public class TestingPage {
 
     private final SelenideElement textContainerLocator = $(".text.aos-init.aos-animate");
     private final SelenideElement aboutCompanyLocator = $$("a").findBy(text("О компании"));
-    private final ElementsCollection menuItemsLocator = $("ul.sub).$$("li a");  
+    private final ElementsCollection menuItemsLocator = $("ul.sub").$$("li a");  
 
 
     public TestingPage findCertainText(String text) {
@@ -24,7 +24,7 @@ public class TestingPage {
         aboutCompanyLocator.hover();
 
         for(int i = 0; i < listMenuText.size(); i++) {
-            menuItemsLocator.get(i).shouldHave(text(listMenuText.get(i)))
+            menuItemsLocator.get(i).shouldHave(text(listMenuText.get(i)));
         }
 
         
