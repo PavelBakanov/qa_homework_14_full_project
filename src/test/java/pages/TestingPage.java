@@ -27,7 +27,7 @@ public class TestingPage {
             burgerMenuLocator.click();
         }
         
-        aboutCompanyLocator.hover().click();
+        aboutCompanyLocator.scrollTo().hover().click();
 
         for(int i = 0; i < listMenuText.length; i++) {
             menuItemsLocator.get(i).shouldHave(text(listMenuText[i]));
