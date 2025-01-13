@@ -30,7 +30,7 @@ public class TestingPage {
         aboutCompanyLocator.scrollTo().hover().click();
 
         for(int i = 0; i < listMenuText.length; i++) {
-            menuItemsLocator.get(i).shouldHave(text(listMenuText[i]));
+            menuItemsLocator.get(i).scrollTo().shouldHave(text(listMenuText[i]));
         }
         return this;
     }
