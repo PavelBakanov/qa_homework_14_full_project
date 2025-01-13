@@ -42,7 +42,7 @@ public class CheckTextTests extends TestBase {
             mainPage.clickTestingButton();
         });
         step("Проверить по тексту всё меню 'О компании'", () -> {
-            testingPage.checkTextInAboutCompanyMenu("О нас", "Портфолио", "Карьера", "Для респондентов");
+            testingPage.checkTextInAboutCompanyMenu("О нас", "Потфолио", "Карьера", "Для респондентов");
         });
     }
 
