@@ -4,8 +4,6 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
-import java.util.Objects;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.actions;
@@ -26,8 +24,8 @@ public class CrowdtestingPage {
 
     @Step("После прокрутки шторки проверить, что текст в ней поменялся на другой")
     public CrowdtestingPage checkTextInCurrentSlide(String text) {
-            feedbacksSliderLocator.$("[aria-hidden='false'] .txt").
-                    shouldHave(text(text));
+        feedbacksSliderLocator.$("[aria-hidden='false'] .txt").
+                shouldHave(text(text));
         return this;
     }
 }

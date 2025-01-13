@@ -4,9 +4,10 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.*;
-
-import static io.qameta.allure.Allure.step;
+import pages.CasesPage;
+import pages.MainPage;
+import pages.ResearchPage;
+import pages.TestingPage;
 
 @Owner(value = "bakanovpb")
 @Tag("crowdtesting")
@@ -40,7 +41,7 @@ public class CheckTextTests extends TestBase {
         mainPage.clickResearchButton();
         researchPage.scrollToCertainTitle("Количественные исследования");
         researchPage.checkContentOfAnimatedText("выбрать наиболее важный функционал продукта, " +
-                    "определить лучший вариант UI и др.");
+                "определить лучший вариант UI и др.");
     }
 
     @Test
@@ -50,7 +51,7 @@ public class CheckTextTests extends TestBase {
         mainPage.openCasesPage();
         casesPage.clickToMoreButton();
         casesPage.checkOfCertainText("Одному из Операторов большой тройки" +
-                    " требуется обеспечить автоматизированное тестирование всего функционала биллинговой системы:");
+                " требуется обеспечить автоматизированное тестирование всего функционала биллинговой системы:");
     }
 
     @Test
@@ -60,8 +61,8 @@ public class CheckTextTests extends TestBase {
         mainPage.openCasesPage();
         casesPage.clickToMoreButton();
         casesPage.checkOfCertainText("Большая доля пользователей перестают пользоваться приложением после" +
-                    " установки и регистрации. Необходимо понять, почему приложением не пользуются, несмотря на то," +
-                    " что по данным других исследований целевая аудитория высоко оценивает саму идею такого рода" +
-                    " приложения.");
+                " установки и регистрации. Необходимо понять, почему приложением не пользуются, несмотря на то," +
+                " что по данным других исследований целевая аудитория высоко оценивает саму идею такого рода" +
+                " приложения.");
     }
 }

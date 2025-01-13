@@ -4,9 +4,8 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.*;
-
-import static io.qameta.allure.Allure.step;
+import pages.BlogPage;
+import pages.MainPage;
 
 @Owner(value = "bakanovpb")
 @Tag("crowdtesting")
@@ -22,6 +21,6 @@ public class CheckSearchTests extends TestBase {
         mainPage.openBlogPage();
         blogPage.typeTextToInputField("как получить");
         blogPage.checkCertainTextInPlain("Как получить дополнительные бонусы" +
-                    " за участие в проектах краудтестирования");
+                " за участие в проектах краудтестирования");
     }
 }
