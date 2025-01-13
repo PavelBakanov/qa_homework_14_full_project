@@ -8,6 +8,7 @@ import pages.*;
 
 import static io.qameta.allure.Allure.step;
 
+@Owner(value = "bakanovpb")
 @Tag("crowdtesting")
 @DisplayName("Тесты на проверку поиска")
 public class CheckSearchTests extends TestBase {
@@ -15,22 +16,12 @@ public class CheckSearchTests extends TestBase {
     private final BlogPage blogPage = new BlogPage();
 
     @Test
-    @Owner(value = "bakanovpb")
     @DisplayName("Проверка поиска")
     public void searchTest() {
-        step("Открываем главную страницу", () -> {
-            mainPage.openMainPage();
-        });
-        step("Открыть раздел 'Блог'", () -> {
-            mainPage.openBlogPage();
-        });
-        step("Ввести определенный текст и нажать Enter", () -> {
-            blogPage.typeTextToInputField("как получить");
-        });
-        step("Проверить нужный текст в самой первой выдаче результата", () -> {
-            blogPage.checkCertainTextInPlain("Как получить дополнительные бонусы" +
+        mainPage.openMainPage();
+        mainPage.openBlogPage();
+        blogPage.typeTextToInputField("как получить");
+        blogPage.checkCertainTextInPlain("Как получить дополнительные бонусы" +
                     " за участие в проектах краудтестирования");
-        });
     }
-
 }
