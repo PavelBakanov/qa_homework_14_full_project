@@ -27,10 +27,10 @@ public class TestingPage {
             burgerMenuLocator.click();
         }
         
-        aboutCompanyLocator.scrollIntoView().hover().click();
+        aboutCompanyLocator.scrollIntoView(true).hover().click();
 
         for(int i = 0; i < listMenuText.length; i++) {
-            menuItemsLocator.get(i).scrollIntoView().shouldHave(text(listMenuText[i]));
+            menuItemsLocator.get(i).scrollIntoView(true).shouldHave(text(listMenuText[i]));
         }
         return this;
     }
